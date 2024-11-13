@@ -1,0 +1,339 @@
+color1 = #195875
+colorbg = #f5f6fa
+colorlink = #151e45
+color2 = #fff
+colorSb = #195875
+
+body
+    background-color colorbg
+    font-size 14px
+    font-family 'Roboto', sans-serif;
+
+h2,h3,h4,h5,ul,body,html
+    padding 0px
+    margin 0px
+
+a
+    text-decoration none
+    &:hover
+        text-decoration none
+.form-control
+    &:focus
+        box-shadow none
+        outline none
+.color_link
+    color colorlink !important
+.wrapper
+    min-height 100vh
+    overflow hidden
+    .col1
+        float left
+        position relative
+        z-index 999
+        width 17%
+    .col2
+        float left
+        width 83%
+
+.sidebar
+    background-color color2
+    min-height 100vh
+    padding-top 20px;
+    font-size calc(0.5rem + 0.4vw);
+    .section-top
+        background-color color2
+        box-shadow 0 0.5rem 1rem rgba(0, 0, 0, 0.15)
+    .logo
+        display block
+        background-repeat no-repeat
+        width 40%
+        margin 0px auto
+        background-position center
+    .user
+        color colorlink !important
+        padding 16px
+        a
+            color colorlink
+            font-size calc(0.5rem + 0.3vw)
+    .main
+        display block
+        margin-top 12px
+        ul
+            li
+                margin-bottom 4px
+                a
+                    color colorSb
+                    display block
+                    font-size 1.1em
+                    padding 12px 16px
+                    i
+                        margin-right 10px
+                    &:hover
+                        background-color color1
+                        box-shadow 0 0.5rem 1rem rgba(0, 0, 0, 0.15)
+                        text-decoration none
+                        color color2
+                a.active
+                    background-color color1
+                    box-shadow 0 0.5rem 1rem rgba(0, 0, 0, 0.15)
+                    text-decoration none
+                    color color2
+.page
+    padding-top 16px
+    .breadcrumb
+        background-color color1
+        box-shadow 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important
+        .breadcrumb-item
+            a
+                color color2 !important
+                &:hover
+                    text-decoration none !important
+.col-md-4
+    .container-fluid
+        height 100%
+.footer
+    color black
+    height 3%
+    position fixed
+    bottom 0%
+    left calc(16% - 9px)
+    a
+        color black
+.Img-fam
+    max-height 70px
+    .container-fluid
+        padding 0 34px;
+        height 100%;
+        .inside
+            height 100%
+            padding 0
+            img
+                background-repeat no-repeat
+                background-size 100% auto !important
+                display inline-block
+                width 100%
+                height 100%
+                background-position-x center
+                background-position-y center
+
+.panel
+    background-color color2
+    border-radius 6px
+    border-bottom 2px solid color1
+    width 100%
+    height 100%
+    .header
+        border-bottom 1px solid gray
+        h2.title
+            display inline-block
+            color #192123
+            font-size  calc(0.5rem + 0.4vw)
+            padding 12px 16px
+        ul
+
+            display inline-block
+            float right
+            margin-right 12px
+            li
+                display inline-block
+                position relative
+                a
+                    color colorlink
+                    display inline-block
+                    padding 10px
+                    &:hover
+                        background-color colorlink
+                        color color2
+                        text-decoration none
+                ul
+                    background-color color2
+                    display none
+                    float none
+                    position absolute
+                    width 160px
+                    right -24px
+                    li
+                        display inline-block
+                        border-bottom 1px solif #f0f0f0
+                        width 100%
+                        &:last-child
+                            border-bottom 0px
+                        a
+                            display block
+                &:hover
+                    ul
+                        display block
+
+
+    .inside
+        padding 16px
+        .nav
+            .nav-link
+                color color2
+                background-color colorlink
+                border 2px solid color2
+                border-radius 8px
+                margin-right 8px
+                &:hover
+                    color colorlink
+                    background-color color2
+                    border 2px solid colorlink
+        .form_search
+            display none
+            .btn
+                width 100%
+        .big_count
+            display block
+            text-align center
+            width 100%
+            font-size 2.5em
+
+.opts
+    a
+        border-radius 4px
+        border 1px solid #dedede
+        display inline-block
+        padding 8px 12px
+.mt16
+    margin-top 16px
+.cke
+    width 100% !important
+
+.product_gallery
+    .btn-submit
+        display block
+        overflow hidden
+        margin-right 1px
+        width 100%
+        a
+            border 1px dashed #666666
+            border-radius 4px
+            color #333
+            display block
+            font-size 1.3em
+            text-align center
+            padding 11px
+            width 100%
+            &:hover
+                background-color colorlink
+                color color2
+    .tumbs
+        overflow hidden
+        .tumb
+            float left
+            margin-top 16px
+            position relative
+            width 48%
+            a
+                background-color rgba(0, 0, 0, 0.5)
+                display inline-block
+                position absolute
+                color color2
+                padding 6px 10px
+                border-radius 50%
+                bottom 8px
+                right 8px
+            img
+                border-radius 4px
+                width 100%
+            &:nth-child(odd)
+                margin-right 4px
+
+.page_user
+    .mini_profile
+        .avatar
+            border-radius 50%
+            width 150px
+            display block
+            margin 0px auto
+        .info
+            background-color #dfsd
+            span
+                display block
+                font-size 1.2em
+                width 100%
+            span.title
+                font-weight bold
+                margin-top 16px
+        .btn
+            width 100%
+#buscador_producto
+    .position-ref
+        height 100% !important
+.dropdown
+    .menu
+        display none
+.dropdown
+    &:hover
+        .menu
+            display block
+            transition 0.5s
+
+
+.content-btn
+    height 80px
+    margin-bottom 30px
+    .cardBox
+        height 100%
+        .card
+            color color1
+            height 100%
+            padding 0 15px 0 15px
+            justify-content center
+            i
+                font-size calc(1rem + 1vw)
+
+    &:hover
+        .card
+            background-color color1
+            color color2
+            transition 0.5
+.logo-y-descripcion-corta
+    display inline-table
+.edit_avatar
+    a
+        display block
+        position relative
+        margin 0 auto
+        width 140px
+        .overlay
+            position absolute
+            align-items center
+            background-color rgba(0, 0, 0, .15)
+            border-radius 50%
+            display none
+            justify-content center
+            width 100%
+            height 140px
+            color #fff
+            font-size 2em
+            img
+                width 60px
+        &:hover
+            .overlay
+                display flex
+    img
+        height 100%
+        border-radius 50%
+        display block
+        width 100%
+    .form-control
+        display none
+label
+    font-size  calc(0.5rem + 0.4vw)
+iframe
+    height 100%
+    width 100%
+@media (max-width 768px)
+    #Admin-sidebar
+        display none
+    #Admin-navbar
+        display flex
+    #Admin-content
+        width 100%
+    .sidebar
+        font-size calc(1rem + 0.4vw);
+    .icon-logo
+        border-radius 50%
+    .logo
+        width 20% !important
