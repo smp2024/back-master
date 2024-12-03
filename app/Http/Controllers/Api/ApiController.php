@@ -15,8 +15,8 @@ class ApiController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string',
         ]);
 
         if ($validator->fails()) {
@@ -49,5 +49,12 @@ class ApiController extends Controller
         }
 
         return response()->json(['message' => 'Login exitoso', 'flag' => true, 'user' => auth()->user()]);
+    }
+
+    // Lista de usuarios
+    public function userList()
+    {
+        $users = User::all();
+        return response()->json($users, 200);
     }
 }

@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('register', [ApiController::class, 'register'])->middleware('api.key');
 Route::post('login', [ApiController::class, 'login'])->middleware('api.key');
+Route::get('user-list', [ApiController::class, 'userList']);
 
 // Route::post('register', 'Api\ApiController@register')->name('register.user');
 // Route::post('register', 'Api\ApiController@login')->name('login.user');
