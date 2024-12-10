@@ -54,7 +54,29 @@ class ApiController extends Controller
     // Lista de usuarios
     public function userList()
     {
-        $users = User::all();
+        $users = User::select('id','name', 'lastname', 'email')->get();
+
+        // Modificar los usuarios para verificar si alguno de los campos está vacío
+        $users = $users->map(function ($user) {
+            $user->name = $user->name ?? 'sin dato';
+            $user->lastName = $user->lastname ?? 'sin dato';
+            $user->email = $user->email ?? 'sin dato';
+            $user->motherLastName = $user->name ?? 'sin dato';
+            $user->status = $user->lastname ?? 'sin dato';
+            $user->rol = $user->email ?? 'sin dato';
+            $user->actions = '
+            <button class="btn btn-sm btn-primary edit-btn" data-id="' . $user->id . '" title="Editar">
+                <i class="fa fa-edit"></i>
+            </button>
+            <button class="btn btn-sm btn-secondary settings-btn" data-id="' . $user->id . '" title="Configuración">
+                <i class="fa fa-cogs"></i>
+            </button>
+            <button class="btn btn-sm btn-secondary view-btn" data-id="' . $user->id . '" title="Ver información" (click)="userView()">
+                <i class="fa fa-eye"></i>
+            </button>';
+            return $user;
+        });
+
         return response()->json($users, 200);
     }
 }
